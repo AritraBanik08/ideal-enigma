@@ -7,22 +7,22 @@ def conn():
     return cur
 
 
-def create_table(cur):
+def create_table(cur: sqlite3.Cursor):
     cur.execute("CREATE TABLE IF NOT EXISTS tasks (id INTEGER PRIMARY KEY, task TEXT, status TEXT)")
     cur.connection.commit()
 
 
-def add_task(cur, task):
+def add_task(cur: sqlite3.Cursor, task):
     cur.execute("INSERT INTO tasks (task, status) VALUES (?, ?)", (task, "Not Done"))
     cur.connection.commit()
 
 
-def view_tasks(cur):
+def view_tasks(cur: sqlite3.Cursor):
     cur.execute("SELECT * FROM tasks")
     tasks = cur.fetchall()
     return tasks
 
 
-def update_task(cur, task_id):
+def update_task(cur: sqlite3.Cursor, task_id):
     cur.execute("UPDATE tasks SET status = 'Done' WHERE id = ?", (task_id,))
     cur.connection.commit()
