@@ -42,33 +42,44 @@
                     </tr>
                   </thead>
                   <tbody>
+<!--                    <tr>-->
+<!--                      <th scope="row">1</th>-->
+<!--                      <td>Buy groceries for next week</td>-->
+<!--                      <td>In progress</td>-->
+<!--                      <td>-->
+<!--                        <button type="submit" class="btn btn-danger">Delete</button>-->
+<!--                        <button type="submit" class="btn btn-success ms-1">Finished</button>-->
+<!--                      </td>-->
+<!--                    </tr>-->
+                    {% for task in tasks %}
                     <tr>
-                      <th scope="row">1</th>
-                      <td>Buy groceries for next week</td>
-                      <td>In progress</td>
+                      <th scope="row">{{task[0]}}</th>
+                      <td>{{task[1]}}</td>
+                      <td>{{task[2]}}</td>
                       <td>
                         <button type="submit" class="btn btn-danger">Delete</button>
                         <button type="submit" class="btn btn-success ms-1">Finished</button>
                       </td>
                     </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Renew car insurance</td>
-                      <td>In progress</td>
-                      <td>
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                        <button type="submit" class="btn btn-success ms-1">Finished</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Sign up for online course</td>
-                      <td>In progress</td>
-                      <td>
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                        <button type="submit" class="btn btn-success ms-1">Finished</button>
-                      </td>
-                    </tr>
+                    {% endfor %}
+<!--                    <tr>-->
+<!--                      <th scope="row">2</th>-->
+<!--                      <td>Renew car insurance</td>-->
+<!--                      <td>In progress</td>-->
+<!--                      <td>-->
+<!--                        <button type="submit" class="btn btn-danger">Delete</button>-->
+<!--                        <button type="submit" class="btn btn-success ms-1">Finished</button>-->
+<!--                      </td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                      <th scope="row">3</th>-->
+<!--                      <td>Sign up for online course</td>-->
+<!--                      <td>In progress</td>-->
+<!--                      <td>-->
+<!--                        <button type="submit" class="btn btn-danger">Delete</button>-->
+<!--                        <button type="submit" class="btn btn-success ms-1">Finished</button>-->
+<!--                      </td>-->
+<!--                    </tr>-->
                   </tbody>
                 </table>
 
